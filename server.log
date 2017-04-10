@@ -1,0 +1,23 @@
+ Listening on http://127.0.0.1:8080
+127.0.0.1 - GET / HTTP/1.1 200 300 - 13.610 ms
+127.0.0.1 - GET /favicon.ico HTTP/1.1 404 24 - 2.065 ms
+127.0.0.1 - GET /service.html HTTP/1.1 200 6883 - 4.528 ms
+127.0.0.1 - GET /eneryi/static/html/service/service.css HTTP/1.1 200 7611 - 4.274 ms
+127.0.0.1 - GET /eneryi/static/js/css/layui.css HTTP/1.1 200 35924 - 3.742 ms
+127.0.0.1 - GET /eneryi/static/js/laypage/skin/laypage.css HTTP/1.1 200 1292 - 4.059 ms
+127.0.0.1 - GET /eneryi/static/lib/mod.js HTTP/1.1 200 6084 - 4.247 ms
+127.0.0.1 - GET /eneryi/static/js/laypage/laypage.js HTTP/1.1 200 3903 - 4.500 ms
+127.0.0.1 - GET /eneryi/static/html/service/service.js HTTP/1.1 200 1493 - 4.725 ms
+127.0.0.1 - GET /eneryi/static/lib/vue.js HTTP/1.1 200 241378 - 1.014 ms
+127.0.0.1 - GET /eneryi/static/img/logo.png HTTP/1.1 200 4276 - 0.838 ms
+127.0.0.1 - GET /eneryi/static/img/icon.png HTTP/1.1 200 8840 - 0.487 ms
+127.0.0.1 - GET /packline.html HTTP/1.1 200 4395 - 2.803 ms
+127.0.0.1 - GET /eneryi/static/js/css/layui.css HTTP/1.1 304 - - 2.198 ms
+127.0.0.1 - GET /eneryi/static/js/laypage/skin/laypage.css HTTP/1.1 304 - - 2.677 ms
+127.0.0.1 - GET /eneryi/static/lib/mod.js HTTP/1.1 304 - - 2.918 ms
+127.0.0.1 - GET /eneryi/static/js/laypage/laypage.js HTTP/1.1 304 - - 0.379 ms
+127.0.0.1 - GET /eneryi/static/lib/vue.js HTTP/1.1 304 - - 1.165 ms
+127.0.0.1 - GET /eneryi/static/html/packline/packline.css HTTP/1.1 200 7006 - 8.794 ms
+127.0.0.1 - GET /eneryi/static/html/packline/packline.js HTTP/1.1 200 1495 - 5.543 ms
+127.0.0.1 - GET /eneryi/static/img/logo.png HTTP/1.1 304 - - 0.605 ms
+127.0.0.1 - GET /eneryi/static/img/icon.png HTTP/1.1 304 - - 0.363 ms
