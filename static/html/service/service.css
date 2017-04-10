@@ -97,7 +97,7 @@ header ul.header-r a {
   width: 40px;
   margin-top: 15px;
   margin-left: 15px;
-  background: url(/static/img/icon.png);
+  background: url(/eneryi/static/img/icon.png);
 }
 header ul.header-r a.alarm {
   background-position: 0 0;
@@ -136,7 +136,7 @@ aside ul.nav-left > li div {
   padding: 0 15px 0 20px;
 }
 aside ul.nav-left > li i {
-  background: url(/static/img/icon.png) no-repeat;
+  background: url(/eneryi/static/img/icon.png) no-repeat;
   display: inline-block;
   height: 14px;
   width: 14px;
@@ -185,7 +185,7 @@ aside ul.nav-left span {
   float: right;
   width: 8px;
   height: 4px;
-  background: url(/static/img/icon.png) no-repeat;
+  background: url(/eneryi/static/img/icon.png) no-repeat;
   background-position: -160px -24px;
   margin-top: 18px;
 }
@@ -218,7 +218,7 @@ section .cont-nav i {
   width: 11px;
   height: 10px;
   margin: 15px 10px 15px 28px;
-  background: url("/static/img/icon.png") no-repeat;
+  background: url("/eneryi/static/img/icon.png") no-repeat;
   background-position: -160px -14px;
 }
 section .cont-nav span {

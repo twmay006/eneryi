@@ -29,11 +29,11 @@ pre{white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -pre-wrap; w
 
 /** 图标字体 **/
 @font-face {font-family: 'layui-icon';
-  src: url('/static/js/font/iconfont.eot?v=1.0.9');
-  src: url('/static/js/font/iconfont.eot?v=1.0.9#iefix') format('embedded-opentype'),
-  url('/static/js/font/iconfont.svg?v=1.0.9#iconfont') format('svg'),
-  url('/static/js/font/iconfont.woff?v=1.0.9') format('woff'),
-  url('/static/js/font/iconfont.ttf?v=1.0.9') format('truetype');
+  src: url('/eneryi/static/js/font/iconfont.eot?v=1.0.9');
+  src: url('/eneryi/static/js/font/iconfont.eot?v=1.0.9#iefix') format('embedded-opentype'),
+  url('/eneryi/static/js/font/iconfont.svg?v=1.0.9#iconfont') format('svg'),
+  url('/eneryi/static/js/font/iconfont.woff?v=1.0.9') format('woff'),
+  url('/eneryi/static/js/font/iconfont.ttf?v=1.0.9') format('truetype');
   
 }
                     
