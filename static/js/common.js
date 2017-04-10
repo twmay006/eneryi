@@ -5,7 +5,8 @@ define('modules/js/common', function(require, exports, module) {
   if(location.pathname.search(/\.html/g)==-1){
   	var fileName="nopage";
   }else{
-  	var fileName=location.pathname.replace(/\.html/g,"").slice(1);
+  	var ppp=location.pathname.replace(/\.html/g,"");
+  	var fileName=ppp.slice(ppp.lastIndexOf("/")+1);
   }
   
   var pindex=$(".nav-left").find("[data-page="+fileName+"]").parent().parent().index();
