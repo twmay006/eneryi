@@ -15,7 +15,6 @@ define('modules/html/service/service', function(require, exports, module) {
                                           for(var j = 0;j<orderList.rows.length;j++){
                                                                           orderList.rows[j].checked = false;
                                           }
-  
       			var posi=new Vue({
   		             	el:'#order-table',
   		             	data:{
