@@ -12,8 +12,6 @@ define('modules/html/service/service', function(require, exports, module) {
       		type:"GET",
       		success:function(data){
       			orderList=data.data;
-      			console.log(orderList);
-  
                                           for(var j = 0;j<orderList.rows.length;j++){
                                                                           orderList.rows[j].checked = false;
                                           }

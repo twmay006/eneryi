@@ -10,6 +10,7 @@ define('modules/js/common', function(require, exports, module) {
   }
   
   var pindex=$(".nav-left").find("[data-page="+fileName+"]").parent().parent().index();
+  if(pindex==-1)pindex=$(".nav-left>li").size();
   var cindex=$(".nav-left").find("[data-page="+fileName+"]").text();
   
   module.exports={
