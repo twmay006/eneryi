@@ -271,6 +271,13 @@ section .question-detail .info-picker div.avatar {
   width: 100px;
   margin-right: 20px;
 }
+section .question-detail .info-picker div.avatar i {
+  float: right;
+  width: 46px;
+  height: 46px;
+  background: url("/eneryi/static/img/icon.png");
+  background-position: 0 -40px;
+}
 section .question-detail .info-picker .question-info {
   display: -ms-flexbox;
   display: flex;
@@ -309,6 +316,13 @@ section .question-detail .chat-record .question {
 section .question-detail .chat-record .q-avatar {
   width: 100px;
   margin-right: 20px;
+}
+section .question-detail .chat-record .q-avatar i {
+  width: 60px;
+  height: 60px;
+  float: right;
+  background: #c5c5c5;
+  border-radius: 99px;
 }
 section .question-detail .chat-record .q-detail {
   display: -ms-flexbox;
