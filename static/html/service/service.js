@@ -8,7 +8,7 @@ define('modules/html/service/service', function(require, exports, module) {
       init: function () {
       	var orderList;
       	$.ajax({
-      		url:"/mock/order.json?t"+new Date().getTime(),
+      		url:"mock/order.json?t="+new Date().getTime(),
       		type:"GET",
       		success:function(data){
       			orderList=data.data;
