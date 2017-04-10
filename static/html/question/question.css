@@ -213,7 +213,7 @@ section .cont-nav i {
   width: 11px;
   height: 10px;
   margin: 15px 10px 15px 28px;
-  background: url("../img/icon.png") no-repeat;
+  background: url("/eneryi/static/img/icon.png") no-repeat;
   background-position: -160px -14px;
 }
 section .cont-nav span {
