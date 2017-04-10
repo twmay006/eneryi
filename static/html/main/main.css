@@ -1,0 +1,201 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+html,
+body,
+div,
+ul,
+li,
+a,
+span,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+i,
+header,
+footer,
+nav,
+aside,
+dl,
+dt,
+dd,
+section,
+input,
+span,
+button {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 1280px;
+  font-size: 12px;
+  background-color: #dce4ed;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  padding-top: 90px;
+}
+img {
+  vertical-align: top;
+}
+header {
+  width: 100%;
+  height: 70px;
+  background: #0072ff;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+header > a {
+  float: left;
+  margin: 10px 15px;
+  width: 168px;
+  height: 50px;
+}
+header ul.toggle-nav {
+  width: 30px;
+  float: left;
+  margin-left: 15px;
+  margin-top: 25px;
+  list-style: none;
+  cursor: pointer;
+}
+header ul.toggle-nav li {
+  border-radius: 99px;
+  background: #fff;
+  height: 5px;
+  margin-bottom: 3px;
+  width: 30px;
+}
+header ul.toggle-nav li:last-child {
+  margin-bottom: 0;
+}
+header ul.header-r {
+  float: right;
+  list-style: none;
+  height: 100%;
+  overflow: hidden;
+  line-height: 70px;
+}
+header ul.header-r li {
+  float: left;
+  text-align: center;
+  width: 90px;
+  height: 100%;
+}
+header ul.header-r a {
+  display: block;
+  height: 40px;
+  width: 40px;
+  margin-top: 15px;
+  margin-left: 15px;
+  background: url(/eneryi/static/img/icon.png);
+}
+header ul.header-r a.alarm {
+  background-position: 0 0;
+}
+header ul.header-r a.setting {
+  background-position: -40px 0;
+}
+header ul.header-r a.avatar {
+  background-position: -80px 0;
+}
+header ul.header-r a.lang {
+  background-position: -120px 0;
+}
+ul {
+  list-style: none;
+}
+aside {
+  width: 180px;
+  height: 100%;
+  color: #7b92aa;
+  padding-top: 100px;
+  background: #2c3948;
+  float: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 90;
+}
+aside ul.nav-left > li {
+  line-height: 40px;
+  border-bottom: 1px solid #293645;
+  font-size: 16px;
+  cursor: default;
+}
+aside ul.nav-left > li div {
+  padding: 0 15px 0 20px;
+}
+aside ul.nav-left > li i {
+  background: url(/eneryi/static/img/icon.png) no-repeat;
+  display: inline-block;
+  height: 14px;
+  width: 14px;
+  margin-right: 15px;
+}
+aside ul.nav-left > li ul {
+  display: none;
+}
+aside ul.nav-left > li ul > li {
+  font-size: 14px;
+  height: 30px;
+  line-height: 30px;
+  background: #283442;
+  padding-left: 50px;
+  cursor: pointer;
+}
+aside ul.nav-left > li ul > li.cur {
+  background: #212933;
+  color: #096bec;
+}
+aside ul.nav-left > li.cur div {
+  color: #fff;
+}
+aside ul.nav-left > li.cur span {
+  background-position: -160px -28px;
+}
+aside ul.nav-left li.myNLE i {
+  background-position: -160px 0;
+}
+aside ul.nav-left li.package i {
+  background-position: -174px 0;
+}
+aside ul.nav-left li.online i {
+  background-position: -188px 0;
+}
+aside ul.nav-left li.service i {
+  background-position: -202px 0;
+}
+aside ul.nav-left li.config i {
+  background-position: -216px 0;
+}
+aside ul.nav-left li.subsection i {
+  background-position: -230px 0;
+}
+aside ul.nav-left span {
+  float: right;
+  width: 8px;
+  height: 4px;
+  background: url(/eneryi/static/img/icon.png) no-repeat;
+  background-position: -160px -24px;
+  margin-top: 18px;
+}
+footer {
+  text-align: center;
+  color: #58646f;
+  margin: 20px 20px 20px 210px;
+  min-width: 1070px;
+}
+section {
+  margin: 0 20px 20px 200px;
+  min-width: 1080px;
+}
