@@ -2,8 +2,12 @@ define('modules/js/common', function(require, exports, module) {
 
   var $ = require('modules/lib/jquery');
   var Vue = require('modules/lib/vue');
+  if(location.pathname.search(/\.html/g)==-1){
+  	var fileName="nopage";
+  }else{
+  	var fileName=location.pathname.replace(/\.html/g,"").slice(1);
+  }
   
-  var fileName=location.pathname.replace(/\.html/g,"").slice(1);
   var pindex=$(".nav-left").find("[data-page="+fileName+"]").parent().parent().index();
   var cindex=$(".nav-left").find("[data-page="+fileName+"]").text();
   
