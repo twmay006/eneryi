@@ -195,11 +195,6 @@ footer {
   margin: 20px 20px 20px 210px;
   min-width: 1070px;
 }
-input[type='date'] {
-  -moz-appearance: none;
-       appearance: none;
-  -webkit-appearance: none !important;
-}
 section {
   margin: 0 20px 20px 200px;
   min-width: 1080px;
@@ -218,7 +213,7 @@ section .cont-nav i {
   width: 11px;
   height: 10px;
   margin: 15px 10px 15px 28px;
-  background: url("/static/img/icon.png") no-repeat;
+  background: url("../img/icon.png") no-repeat;
   background-position: -160px -14px;
 }
 section .cont-nav span {
@@ -227,40 +222,42 @@ section .cont-nav span {
 section .cont-nav p {
   float: left;
 }
-section .order-detail {
+section .question-detail {
   background: #fff;
   padding: 20px;
 }
-section .order-detail h2 {
-  border-bottom: 1px solid #eeeef0;
-  color: #2695ff;
+section .question-detail h2 {
+  color: #6c646f;
   line-height: 30px;
+  float: left;
 }
-section .order-detail .info-picker {
-  height: 70px;
-  padding: 0 30px;
-  line-height: 70px;
-  border-bottom: 1px solid #eeeef0;
+section .question-detail a {
+  text-decoration: none;
+}
+section .question-detail ul.info-detail {
+  color: #919291;
+  list-style: none;
+}
+section .question-detail ul.info-detail li {
+  line-height: 14px;
+  padding: 0 8px;
+  float: left;
+  border-right: 1px solid #919291;
+}
+section .question-detail ul.info-detail li:first-child {
+  padding-left: 0;
+}
+section .question-detail ul.info-detail li:last-child {
+  border-right: 0;
+}
+section .question-detail .info-picker {
+  clear: both;
+  font-size: 14px;
+  height: 130px;
+  background: #ebf4ff;
+  padding: 20px;
+  border: 1px solid #a9e2ff;
   margin-bottom: 20px;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: row;
-      flex-direction: row;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-align: stretch;
-      align-items: stretch;
-}
-section .order-detail .info-picker input {
-  border: 1px solid #eeeef0;
-  outline: 0;
-  width: 100%;
-  height: 30px;
-  color: #1c2836;
-  padding: 0 3px;
-}
-section .order-detail .pick-l {
-  width: 33%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
@@ -270,121 +267,69 @@ section .order-detail .pick-l {
   -ms-flex-align: stretch;
       align-items: stretch;
 }
-section .order-detail .pick-l > div {
-  width: 48%;
-  margin-right: 25px;
+section .question-detail .info-picker div.avatar {
+  width: 100px;
+  margin-right: 20px;
 }
-section .order-detail .pick-r {
-  width: 63%;
+section .question-detail .info-picker .question-info {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start;
+}
+section .question-detail .info-picker .question-info p {
+  color: #58646f;
+}
+section .question-detail h3 {
+  color: #58646f;
+}
+section .question-detail .chat-record {
+  border: 1px solid #eee;
+  min-height: 400px;
+  padding: 30px 60px;
+}
+section .question-detail .chat-record > li {
+  border-bottom: 1px solid #dce4ed;
+  padding-bottom: 20px;
+}
+section .question-detail .chat-record .question {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row;
-  -ms-flex-pack: end;
-      justify-content: flex-end;
+  -ms-flex-pack: start;
+      justify-content: flex-start;
   -ms-flex-align: stretch;
       align-items: stretch;
 }
-section .order-detail .pick-r > div {
-  margin-left: 25px;
-  width: 26%;
+section .question-detail .chat-record .q-avatar {
+  width: 100px;
+  margin-right: 20px;
 }
-section .order-detail .pick-r > div:first-child {
-  margin-left: 0;
+section .question-detail .chat-record .q-detail {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  -ms-flex-align: start;
+      align-items: flex-start;
 }
-section .order-detail .pick-r > div:last-child {
-  margin-left: 20px;
-  width: 75px;
-  position: relative;
+section .question-detail .chat-record p {
+  color: #58646f;
+  line-height: 20px;
+  font-size: 16px;
+  margin-bottom: 10px;
 }
-section .order-detail .pick-r button {
-  height: 30px;
-  width: 100%;
-  background: #0994ff;
-  color: #fff;
-  border: 0;
-  outline: 0;
-  font-size: 14px;
-}
-section .order-detail .pick-r button:hover {
-  background: #0078d5;
-}
-section .hasSel {
-  position: relative;
-}
-section .hasSel i,
-section .hasSel ul {
-  display: none;
-}
-section table {
-  color: #5d646f;
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 20px;
-}
-section table th,
-section table td {
-  border: 1px solid #b6c4d4;
-  text-align: left;
-}
-section table th {
-  padding-left: 3px;
-}
-section table td {
-  text-align: center;
-}
-section table tr td:last-child {
-  padding-left: 3px;
-}
-section table th.th1 {
-  width: 2%;
-}
-section table th.th2 {
-  width: 9%;
-}
-section table th.th3 {
-  width: 8%;
-}
-section table th.th4 {
-  text-align: center;
-  padding-left: 0;
-  width: 12%;
-}
-section table th.th5 {
-  text-align: center;
-  padding-left: 0;
-  width: 4%;
-}
-section table th.th6 {
-  text-align: center;
-  padding-left: 0;
-  width: 5%;
-}
-section table th.th7 {
-  width: 11%;
-}
-section table th.th8 {
-  text-align: center;
-  padding-left: 0;
-  width: 5%;
-}
-section table th.th9 {
-  text-align: center;
-  padding-left: 0;
-  width: 5%;
-}
-section table th.th10 {
-  width: 8%;
-}
-section table th.th11 {
-  text-align: center;
-  padding-left: 0;
-  width: 6%;
-}
-section table th.th12 {
-  text-align: center;
-  padding-left: 0;
-  width: 6%;
+section .question-detail .chat-record .fujian {
+  margin-left: 30px;
+  height: 80px;
+  width: 200px;
 }
 section span.pre-green {
   color: #007600;

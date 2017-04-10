@@ -1,6 +1,6 @@
 define('modules/html/packline/packline', function(require, exports, module) {
 
-  require("modules/js/laypage/laypage");
+  // require("modules/js/laypage/laypage.js");
   // var elData={
   // 	'position':'hhhhh'
   // }

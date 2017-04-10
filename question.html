@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>在线下单</title>	
+    <link rel="stylesheet" type="text/css" href="/static/html/question/question.css" />
+    <link rel="stylesheet" href="/static/html/question/question.css" />
+</head>
+	<body>
+		<header>
+	<a href="javascript:;">
+		<img src="/static/img/logo.png">
+	</a>
+	<ul class="toggle-nav"><li></li><li></li><li></li></ul>
+	<ul class="header-r">
+		<li><a class="head-img alarm" href="javascript:;"></a></li>
+		<li><a class="head-img setting" href="javascript:;"></a></li>
+		<li><a class="head-img avatar" href="javascript:;"></a></li>
+		<li><a class="head-img lang" href="javascript:;"></a></li>
+	</ul>
+</header>
+		<aside>
+	<ul class="nav-left" id="nav-left">
+		<li class="myNLE" v-on:click="curToggle">
+			<div class="navgator"><i></i>我的NLE<span></span></div>
+		</li>
+		<li class="package" v-on:click="curToggle">
+			<div class="navgator"><i></i>包裹管理<span></span></div>
+			<ul>
+				<li data-page="service" v-on:click="jump">订单列表</li>
+				<li data-page="index" v-on:click="jump">包裹列表</li>
+				<li data-page="index" v-on:click="jump">批次列表</li>
+				<li data-page="index" v-on:click="jump">退运包裹列表</li>
+			</ul>
+		</li>
+		<li class="online" v-on:click="curToggle">
+			<div class="navgator"><i></i>在线下单<span></span></div>
+			<ul>
+				<li data-page="packline" v-on:click="jump">快递下单线路</li>
+			</ul>
+		</li>
+		<li class="service" v-on:click="curToggle">
+			<div class="navgator"><i></i>服务中心<span></span></div>
+			<ul>
+				<li data-page="question" v-on:click="jump">问题列表</li>
+				<li data-page="index" v-on:click="jump">订单投诉列表</li>
+				<li data-page="index" v-on:click="jump">包裹理赔列表</li>
+			</ul>
+		</li>
+		<li class="config" v-on:click="curToggle">
+			<div class="navgator"><i></i>常用配置<span></span></div>
+			<ul>
+			</ul>
+		</li>
+		<li class="subsection" v-on:click="curToggle">
+			<div class="navgator"><i></i>子代理栏目<span></span></div>
+			<ul>
+			</ul>
+		</li>
+	</ul>
+</aside>		<section>
+	<div id="cont-nav" class="cont-nav">
+		<i></i>
+		<p><span>{{parent}}</span>/{{child}}</p>
+	</div>
+	<div class="question-detail">
+		<h2>我的问题详情</h2>
+		<div class="info-picker">
+			<div class="avatar"></div>
+			<div class="question-info">
+				<p>are you ok?</p>
+				<ul class="info-detail">
+					<li>问题编号:37</li>
+					<li>提交时间:201-01-18 04:29:46</li>
+					<li>状态:正在为您处理</li>
+					<li><a href="javascript:;">关闭问题</a></li>
+				</ul>
+			</div>
+		</div>
+		<h3>沟通记录</h3>
+		<ul class="chat-record">
+			<li class="question">
+				<div class="q-avatar"></div>
+				<div class="q-detail">
+					<p>are you ok?</p>
+					<div class="info-picker fujian"></div>
+					<ul class="info-detail">
+						<li>周星星</li>
+						<li>2016-12-02 13:29:24</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+</section>
+
+
+
+
+		<footer>
+	Copyright &copy; 2017 Nederlands Express B.V.
+</footer>	
+<script type="text/javascript" src="/static/lib/mod.js"></script>
+<script type="text/javascript">/*resourcemap*/
+require.resourceMap({
+  "res": {
+    "modules/js/common": {
+      "url": "/static/js/common.js",
+      "type": "js"
+    },
+    "modules/html/left/left": {
+      "url": "/static/html/left/left.js",
+      "type": "js",
+      "deps": [
+        "modules/js/common"
+      ]
+    }
+  },
+  "pkg": {}
+});</script>
+<script type="text/javascript" src="/static/lib/jquery.js"></script>
+<script type="text/javascript" src="/static/lib/vue.js"></script>
+<script type="text/javascript" src="/static/html/question/question.js"></script>
+<script>
+    require.async(['modules/html/left/left'], function (app) {
+    	var pindex=app.p_index;
+        app.init();
+    });
+
+
+			require.async(['modules/html/question/question'], function(app){
+        				app.init();
+   			 });
+		</script>
+</body>
+</html>

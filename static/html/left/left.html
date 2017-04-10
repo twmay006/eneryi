@@ -1,15 +1,46 @@
 <aside>
-	<dl class="nav-left">
-		<dt class="myNLE"><i></i>我的NLE</dt>
-		<dt class="package cur"><i></i>包裹管理</dt>
-		<dd>订单列表</dd>
-		<dd class="cur">包裹列表</dd>
-		<dd>批次列表</dd>
-		<dd>退运包裹列表</dd>
-		<dt class="online"><i></i>在线下单</dt>
-		<dd>快递下单线路</dd>
-		<dt class="service"><i></i>服务中心</dt>
-		<dt class="config"><i></i>常用配置</dt>
-		<dt class="subsection"><i></i>子代理栏目</dt>
-	</dl>
+	<ul class="nav-left" id="nav-left">
+		<li class="myNLE" v-on:click="curToggle">
+			<div class="navgator"><i></i>我的NLE<span></span></div>
+		</li>
+		<li class="package" v-on:click="curToggle">
+			<div class="navgator"><i></i>包裹管理<span></span></div>
+			<ul>
+				<li data-page="service" v-on:click="jump">订单列表</li>
+				<li data-page="index" v-on:click="jump">包裹列表</li>
+				<li data-page="index" v-on:click="jump">批次列表</li>
+				<li data-page="index" v-on:click="jump">退运包裹列表</li>
+			</ul>
+		</li>
+		<li class="online" v-on:click="curToggle">
+			<div class="navgator"><i></i>在线下单<span></span></div>
+			<ul>
+				<li data-page="packline" v-on:click="jump">快递下单线路</li>
+			</ul>
+		</li>
+		<li class="service" v-on:click="curToggle">
+			<div class="navgator"><i></i>服务中心<span></span></div>
+			<ul>
+				<li data-page="question" v-on:click="jump">问题列表</li>
+				<li data-page="index" v-on:click="jump">订单投诉列表</li>
+				<li data-page="index" v-on:click="jump">包裹理赔列表</li>
+			</ul>
+		</li>
+		<li class="config" v-on:click="curToggle">
+			<div class="navgator"><i></i>常用配置<span></span></div>
+			<ul>
+			</ul>
+		</li>
+		<li class="subsection" v-on:click="curToggle">
+			<div class="navgator"><i></i>子代理栏目<span></span></div>
+			<ul>
+			</ul>
+		</li>
+	</ul>
 </aside>
+<script>
+    require.async(['modules/html/left/left'], function (app) {
+    	var pindex=app.p_index;
+        app.init();
+    });
+</script>

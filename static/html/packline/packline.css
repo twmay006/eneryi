@@ -2,14 +2,6 @@ html {
   height: 100%;
   width: 100%;
 }
-body {
-  height: 100%;
-  width: 100%;
-  min-width: 1280px;
-  font-size: 12px;
-  background-color: #dce4ed;
-  font-family: 'Microsoft YaHei', Arial, sans-serif;
-}
 html,
 body,
 div,
@@ -34,10 +26,20 @@ dt,
 dd,
 section,
 input,
-span {
+span,
+button {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+body {
+  height: 100%;
+  width: 100%;
+  min-width: 1280px;
+  font-size: 12px;
+  background-color: #dce4ed;
+  font-family: 'Microsoft YaHei', Arial, sans-serif;
+  padding-top: 90px;
 }
 img {
   vertical-align: top;
@@ -95,7 +97,7 @@ header ul.header-r a {
   width: 40px;
   margin-top: 15px;
   margin-left: 15px;
-  background: url(/eneryi/static/img/icon.png);
+  background: url(/static/img/icon.png);
 }
 header ul.header-r a.alarm {
   background-position: 0 0;
@@ -109,11 +111,14 @@ header ul.header-r a.avatar {
 header ul.header-r a.lang {
   background-position: -120px 0;
 }
+ul {
+  list-style: none;
+}
 aside {
-  width: 190px;
+  width: 180px;
   height: 100%;
   color: #7b92aa;
-  padding-top: 70px;
+  padding-top: 100px;
   background: #2c3948;
   float: left;
   position: fixed;
@@ -121,51 +126,68 @@ aside {
   left: 0;
   z-index: 90;
 }
-aside dl.nav-left dt {
-  height: 40px;
+aside ul.nav-left > li {
   line-height: 40px;
   border-bottom: 1px solid #293645;
-  font-size: 18px;
-  padding-left: 20px;
+  font-size: 16px;
+  cursor: default;
 }
-aside dl.nav-left dt i {
-  background: url(/eneryi/static/img/icon.png) no-repeat;
+aside ul.nav-left > li div {
+  padding: 0 15px 0 20px;
+}
+aside ul.nav-left > li i {
+  background: url(/static/img/icon.png) no-repeat;
   display: inline-block;
   height: 14px;
   width: 14px;
   margin-right: 15px;
 }
-aside dl.nav-left dt.cur {
-  color: #fff;
+aside ul.nav-left > li ul {
+  display: none;
 }
-aside dl.nav-left dd {
-  font-size: 16px;
+aside ul.nav-left > li ul > li {
+  font-size: 14px;
   height: 30px;
   line-height: 30px;
   background: #283442;
   padding-left: 50px;
+  cursor: pointer;
 }
-aside dl.nav-left dd.cur {
+aside ul.nav-left > li ul > li.cur {
   background: #212933;
   color: #096bec;
 }
-aside dl.nav-left dt.myNLE i {
+aside ul.nav-left > li.cur div {
+  color: #fff;
+}
+aside ul.nav-left > li.cur span {
+  background-position: -160px -28px;
+}
+aside ul.nav-left li.myNLE i {
   background-position: -160px 0;
 }
-aside dl.nav-left dt.package i {
+aside ul.nav-left li.package i {
   background-position: -174px 0;
 }
-aside dl.nav-left dt.online i {
+aside ul.nav-left li.online i {
   background-position: -188px 0;
 }
-aside dl.nav-left dt.service i {
+aside ul.nav-left li.service i {
   background-position: -202px 0;
 }
-aside dl.nav-left dt.config i {
+aside ul.nav-left li.config i {
   background-position: -216px 0;
 }
-aside dl.nav-left dt.subsection i {
+aside ul.nav-left li.subsection i {
   background-position: -230px 0;
+}
+aside ul.nav-left span {
+  float: right;
+  width: 8px;
+  height: 4px;
+  background: url(/static/img/icon.png) no-repeat;
+  background-position: -160px -24px;
+  margin-top: 18px;
 }
 footer {
   text-align: center;
@@ -174,8 +196,8 @@ footer {
   min-width: 1070px;
 }
 section {
-  margin: 20px 20px 20px 210px;
-  min-width: 1070px;
+  margin: 0 20px 20px 200px;
+  min-width: 1080px;
 }
 section .cont-nav {
   background: #fff;
@@ -191,7 +213,7 @@ section .cont-nav i {
   width: 11px;
   height: 10px;
   margin: 15px 10px 15px 28px;
-  background: url("/eneryi/static/img/icon.png") no-repeat;
+  background: url("/static/img/icon.png") no-repeat;
   background-position: -160px -14px;
 }
 section .cont-nav span {
@@ -217,6 +239,7 @@ section .order-detail .info-picker {
 section .order-detail .info-picker p {
   color: #58646f;
   margin-bottom: 10px;
+  width: 750px;
 }
 section .order-detail .info-picker p:last-child {
   margin-bottom: 0;
@@ -231,6 +254,8 @@ section .order-detail .infobox h2 {
 section .order-detail .infobox ul.pack-info {
   list-style: none;
   overflow: hidden;
+  position: relative;
+  z-index: 50;
 }
 section .order-detail .infobox ul.pack-info li {
   float: left;
@@ -245,6 +270,7 @@ section .order-detail .infobox ul.pack-info li span {
   color: #58646f;
   padding: 1px 5px;
   font-size: 16px;
+  cursor: pointer;
 }
 section .order-detail .infobox ul.pack-info li.pack-online span {
   background: #fff;
@@ -259,9 +285,18 @@ section .order-detail .infobox ul.pack-info li.add-pack span {
   background: #fff;
   color: #027eff;
   border: 1px solid #027eff;
+  height: 30px;
+  line-height: 30px;
+  width: 120px;
+  margin: 5px 25px;
+  padding: 0;
 }
 section .order-detail .infobox div.info-content {
   padding: 20px;
+  border: 1px solid #f0f1f2;
+  z-index: 40;
+  position: relative;
+  top: -1px;
 }
 section .order-detail .infobox div.info-content table {
   color: #5d646f;
@@ -279,7 +314,7 @@ section table td {
 }
 section table th {
   padding-left: 3px;
-  line-height: 36px;
+  line-height: 30px;
   text-align: center;
 }
 section table td {
@@ -368,26 +403,6 @@ section ul.pack-option li.opt-gray {
 }
 section ul.pack-option li.opt-gray a {
   color: #b6c4d7;
-}
-section .opt-pager {
-  overflow: hidden;
-}
-section .opt-pager .opt-list {
-  float: left;
-  overflow: hidden;
-  height: 36px;
-  line-height: 36px;
-}
-section .opt-pager .opt-list li {
-  float: left;
-  background: #0994ff;
-  color: #fff;
-  font-size: 14px;
-  padding: 0 6px;
-  cursor: pointer;
-}
-section .opt-pager .opt-list li:hover {
-  background: #0078d5;
 }
 @media screen and (min-width: 1441px) {
   section ul.pack-option li a {

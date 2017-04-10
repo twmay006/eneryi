@@ -1,9 +1,9 @@
 <section>
 	<div id="cont-nav" class="cont-nav">
 		<i></i>
-		<p><span>包裹管理</span>/订单列表</p>
+		<p><span>{{parent}}</span>/{{child}}</p>
 	</div>
-	<div class="order-detail">
+	<div class="order-detail" id="order-table">
 		<h2>订单列表</h2>
 		<div class="info-picker">
 			<div class="pick-l">
@@ -28,7 +28,7 @@
 			</div>
 			<div class="pick-r">
 				<div class="hasSel">
-					<input type="text" name="packStart" placeholder="选择日期">
+					<input type="date" name="packStart" placeholder="选择日期">
 					<i></i>
 					<ul>
 						<li></li>
@@ -37,7 +37,7 @@
 					</ul>
 				</div>
 				<div class="hasSel">
-					<input type="text" name="packEnd" placeholder="选择日期">
+					<input type="date" name="packEnd" placeholder="选择日期">
 					<i></i>
 					<ul>
 						<li></li>
@@ -65,103 +65,38 @@
 				<th class="th12">下单时间（+1）</th>
 				<th class="th13">操作</th>
 			</tr>
-			<tr>
-				<td></td>
-				<td><span>OBD79000070003</span></td>
-				<td><span></span></td>
-				<td><span>EAXOS0950004</span></td>
-				<td>大客户</td>
-				<td>张大爷</td>
-				<td><span>430702198510222031</span></td>
-				<td>4000.00</td>
-				<td>4000.00</td>
-				<td><span>NLE已入库</span><br /><span>（未预约）</span></td>
-				<td></td>
-				<td><span>2017-04-07</span><br /><span> 11:43:33</span></td>
+			<tr v-if="orderTotal" v-for="(item, index) in orderRows">
+				<td v-if="item.packstate=='已付款'"><input v-bind:checked="item.checked" type="checkbox" name="choose" v-on:click="changeChecked(index,orderRows)"></td>
+				<td v-if="item.packstate!='已付款'"></td>
+				<td><span>{{item.orderid}}</span></td>
+				<td><span>{{item.bookid}}</span></td>
+				<td><span>{{item.expressionid}}</span><br v-if="item.preid" /><span class="pre-green" v-if="item.preid" v-text="item.preid+'(备用单号)'"></span></td>
+				<td>{{item.type}}</td>
+				<td>{{item.recevier}}</td>
+				<td><span>{{item.idcard}}</span></td>
+				<td>{{item.shenbao}}</td>
+				<td>{{item.shiji}}</td>
 				<td>
-					<ul class="pack-option">
-						<li><a href="javascript:;">详情</a></li>
-						<li><a href="javascript:;">跟踪</a></li>
-						<li><a href="javascript:;">退款</a></li>
-						<li><a href="javascript:;">理赔</a></li>
-						<li class="opt-green"><a href="javascript:;">面单</a></li>
-					</ul>
+					<span>{{item.packstate}}</span><br /><span v-text="item.bookid?'(已预约)':'(未预约)'"></span>
+
 				</td>
-			</tr>
-			<tr>
-				<td><input type="checkbox" name="choose"></td>
-				<td><span>OBD79000070002</span></td>
-				<td><span>BBD790000704</span></td>
-				<td><span>EAXOS0950003</span></td>
-				<td>大客户</td>
-				<td>张大爷</td>
-				<td><span>430702198510222031</span></td>
-				<td>5000.00</td>
-				<td>0.00</td>
-				<td><span>已付款</span><br /><span>（已预约）</span></td>
-				<td>2017-04-08</td>
-				<td><span>2017-04-07</span><br /><span>11:05:13</span></td>
+				<td>{{item.booktime}}</td>
+				<td><span>{{item.ordertime}}</span></td>
 				<td>
 					<ul class="pack-option">
 						<li><a href="javascript:;">详情</a></li>
 						<li><a href="javascript:;">跟踪</a></li>
 						<li><a href="javascript:;">退款</a></li>
 						<li><a href="javascript:;">理赔</a></li>
-						<li><a href="javascript:;">取消预约</a></li>
-						<li class="opt-green"><a href="javascript:;">面单</a></li>
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><span>OBCU9000070003</span></td>
-				<td><span></span></td>
-				<td><span></span></td>
-				<td>大客户</td>
-				<td>张大爷</td>
-				<td><span>430702198510222031</span></td>
-				<td>7000.00</td>
-				<td>0.00</td>
-				<td><span>已付款</span></td>
-				<td></td>
-				<td><span>2017-03-30</span><br /><span> 08:43:44</span></td>
-				<td>
-					<ul class="pack-option">
-						<li><a href="javascript:;">详情</a></li>
-						<li><a href="javascript:;">跟踪</a></li>
-						<li><a href="javascript:;">退款</a></li>
-						<li><a href="javascript:;">理赔</a></li>
-						<li class="opt-gray"><a href="javascript:;">面单</a></li>
-					</ul>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td><span>OBCU9000070003</span></td>
-				<td><span></span></td>
-				<td><span>EAXOS0890002</span><br /><span class="pre-green">11111111111(备用单号)</span></td>
-				<td>大客户</td>
-				<td>张大爷</td>
-				<td><span>430702198510222031</span></td>
-				<td>7000.00</td>
-				<td>0.00</td>
-				<td><span>取件完成无面单</span><br /><span>（已预约）</span></td>
-				<td></td>
-				<td><span>2017-03-30</span><br /><span> 08:43:44</span></td>
-				<td>
-					<ul class="pack-option">
-						<li><a href="javascript:;">详情</a></li>
-						<li><a href="javascript:;">跟踪</a></li>
-						<li><a href="javascript:;">退款</a></li>
-						<li><a href="javascript:;">理赔</a></li>
-						<li class="opt-green"><a href="javascript:;">面单</a></li>
+						<li v-if="item.bookid"><a href="javascript:;">取消预约</a></li>
+						<li v-bind:class="item.expressionid?'opt-green':'opt-gray'"><a href="javascript:;">面单</a></li>
 					</ul>
 				</td>
 			</tr>
 		</table>
 		<div class="opt-pager">
 			<ul class="opt-list">
-				<li>反选</li>
+				<li v-on:click="dischoose">反选</li>
 				<li>预约</li>
 				<li>取消预约</li>
 				<li>勾选合并下载pdf</li>
@@ -170,5 +105,8 @@
 		</div>
 	</div>
 </section>
-
-
+<script>
+	require.async(['modules/html/service/service'], function(app){
+        		app.init();
+   	});
+</script>
